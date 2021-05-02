@@ -11,6 +11,14 @@ export class TemperatureService {
 
   constructor(private http: HttpClient) { }
 
-
+ getConvertedTempValues(
+    tempValue: string,
+    type: number
+  ): Observable<TempratureModel> {
+    return this.http.get<TempratureModel>(
+      `${environment.baseEndPoint}/Temperature/GetTemperatureValues/${type}/${tempValue}`,
+      
+    );
+  }
 
 }
