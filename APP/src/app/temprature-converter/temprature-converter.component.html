@@ -1,1 +1,60 @@
-<p>temperature-converter</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Temperature Converter</mat-card-title>
+    <mat-card-subtitle>Celsius,Fahrenheit,Kelvin</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="tempratureForm">
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Temperature</mat-label>
+          <input
+            matInput
+            type="number"
+            placeholder="Type value"
+            formControlName="temprature"
+          />
+          <mat-error *ngIf="temprature.errors?.required && temprature.touched"
+            >Value is required.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Select Temperature Type</mat-label>
+          <mat-select formControlName="tempratureType">
+            <mat-option
+              *ngFor="let item of tempratureTypes"
+              [value]="item.id"
+            >
+              {{ item.status }}
+            </mat-option>
+          </mat-select>
+          <mat-error
+            *ngIf="tempratureType.errors?.required && tempratureType.touched"
+            >Temperature type is required.</mat-error
+          >
+        </mat-form-field>
+        <button
+          type="button"
+          (click)="convert()"
+          [disabled]="tempratureForm.invalid"
+          mat-raised-button
+          color="primary"
+        >
+          Convert
+        </button>
+      </div>
+      <div *ngIf="isConvert">
+        <div class="row">
+          <h1>You are converting from {{ tempStatusEnum[tempType] }} To</h1>
+        </div>
+        <div class="row">
+          <p *ngIf="celsius !== 0"><B>Celsius: </B> {{ celsius.toFixed(2) + '°C'}}</p>
+          <p *ngIf="fahrenheit !== 0"><B>Fahrenheit: </B> {{ fahrenheit.toFixed(2) + '°F'}}</p>
+          <p *ngIf="kelvin !== 0"><B>Kelvin: </B> {{ kelvin.toFixed(2) + '°K'}}</p>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
