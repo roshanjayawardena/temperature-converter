@@ -1,0 +1,8 @@
+D:\exercises\UpdatedTestInsighture\API\Temprature\bin\Debug\netcoreapp3.1\Temprature.deps.json
+D:\exercises\UpdatedTestInsighture\API\Temprature\bin\Debug\netcoreapp3.1\Temprature.dll
+D:\exercises\UpdatedTestInsighture\API\Temprature\obj\Debug\netcoreapp3.1\Temprature.AssemblyInfoInputs.cache
+D:\exercises\UpdatedTestInsighture\API\Temprature\obj\Debug\netcoreapp3.1\Temprature.AssemblyInfo.cs
+D:\exercises\UpdatedTestInsighture\API\Temprature\bin\Debug\netcoreapp3.1\Temprature.pdb
+D:\exercises\UpdatedTestInsighture\API\Temprature\obj\Debug\netcoreapp3.1\Temprature.csproj.CoreCompileInputs.cache
+D:\exercises\UpdatedTestInsighture\API\Temprature\obj\Debug\netcoreapp3.1\Temprature.dll
+D:\exercises\UpdatedTestInsighture\API\Temprature\obj\Debug\netcoreapp3.1\Temprature.pdb

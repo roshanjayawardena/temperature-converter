@@ -12,7 +12,6 @@ namespace TestInsightureAPI.Controllers
         {
             var result = await Mediator.Send(new GetTemperatureValuesQuery() { TempValue = tempValue, Type = (TemperatureTypeEnum)type});
             return Ok(result);
-        }
-       
+        }       
     }
 }

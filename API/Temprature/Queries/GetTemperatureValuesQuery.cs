@@ -22,8 +22,7 @@ namespace Temprature.Queries
 
                 var tempModel = new TemperatureModel();
                 var tempValue = Convert.ToDouble(request.TempValue);
-                try
-                {
+               
                     switch (request.Type.ToString())
                     {
                         case "Celsius":
@@ -46,13 +45,7 @@ namespace Temprature.Queries
                             }
                     }
 
-                    return tempModel;
-                }
-                catch (Exception ex)
-                {
-
-                    throw;
-                }              
+                    return tempModel;                
             }
         }
     }
