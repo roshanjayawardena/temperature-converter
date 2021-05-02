@@ -1,0 +1,9 @@
+D:\TestInsightureApi\TestInsightureAPI\Temprature\bin\Debug\netcoreapp3.1\Temprature.deps.json
+D:\TestInsightureApi\TestInsightureAPI\Temprature\bin\Debug\netcoreapp3.1\Temprature.dll
+D:\TestInsightureApi\TestInsightureAPI\Temprature\bin\Debug\netcoreapp3.1\Temprature.pdb
+D:\TestInsightureApi\TestInsightureAPI\Temprature\obj\Debug\netcoreapp3.1\Temprature.AssemblyInfoInputs.cache
+D:\TestInsightureApi\TestInsightureAPI\Temprature\obj\Debug\netcoreapp3.1\Temprature.AssemblyInfo.cs
+D:\TestInsightureApi\TestInsightureAPI\Temprature\obj\Debug\netcoreapp3.1\Temprature.dll
+D:\TestInsightureApi\TestInsightureAPI\Temprature\obj\Debug\netcoreapp3.1\Temprature.pdb
+D:\TestInsightureApi\TestInsightureAPI\Temprature\obj\Debug\netcoreapp3.1\Temprature.csproj.CoreCompileInputs.cache
+D:\TestInsightureApi\TestInsightureAPI\Temprature\obj\Debug\netcoreapp3.1\Temprature.csprojAssemblyReference.cache
