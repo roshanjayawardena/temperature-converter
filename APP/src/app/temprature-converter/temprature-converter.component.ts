@@ -48,14 +48,8 @@ export class TempratureConverterComponent implements OnInit {
       this.tempratureForm.value
     );
     this.tempType = this.tempratureCreateModel.tempratureType;
-    this.calculateTemprature(
-      this.tempratureCreateModel.temprature,
-      this.tempratureCreateModel.tempratureType
-    );
-  }
 
-  calculateTemprature(temp, type) {
-    this.temperatureService.getConvertedTempValues(temp, type).subscribe(
+    this.temperatureService.convertTemperatureValues(this.tempratureCreateModel).subscribe(
       (result) => {
         this.celsius = result.celsius;
         this.fahrenheit = result.fahrenheit;
@@ -64,8 +58,8 @@ export class TempratureConverterComponent implements OnInit {
       (error) => {
        console.log(error);
       }
-    );
-  }
+    );  
+  } 
 
   get temprature() {
     return this.tempratureForm.get('temprature');

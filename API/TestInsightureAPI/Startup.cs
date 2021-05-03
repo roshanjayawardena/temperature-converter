@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -49,7 +50,7 @@ namespace TestInsightureAPI
             });
 
             // DI for application
-            services.AddApplicationTemperature();
+            services.AddApplicationTemperature();         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

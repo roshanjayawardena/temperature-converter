@@ -1,4 +1,6 @@
-﻿namespace Temprature.Queries
+﻿
+
+namespace Temprature.Commands
 {
     public enum TemperatureTypeEnum
     {
