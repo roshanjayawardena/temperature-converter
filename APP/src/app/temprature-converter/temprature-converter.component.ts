@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TemperatureStatusEnum } from '../models/temperature.model';
+import { TemperatureStatusEnum, TempratureModel } from '../models/temperature.model';
 import { TempratureCreateModel } from '../models/temprature-create.model';
 import { TemperatureService } from '../services/temperature.service';
 
@@ -18,9 +18,7 @@ export class TempratureConverterComponent implements OnInit {
     { id: 3, status: 'Fahrenheit' },
   ];
 
-  celsius: number = 0;
-  fahrenheit: number = 0;
-  kelvin: number = 0;
+  tempModel = new TempratureModel();
   tempType: string;
   isConvert: boolean;
   tempStatusEnum = TemperatureStatusEnum;
@@ -51,9 +49,7 @@ export class TempratureConverterComponent implements OnInit {
 
     this.temperatureService.convertTemperatureValues(this.tempratureCreateModel).subscribe(
       (result) => {
-        this.celsius = result.celsius;
-        this.fahrenheit = result.fahrenheit;
-        this.kelvin = result.kelvin;
+        this.tempModel = result; 
       },
       (error) => {
        console.log(error);

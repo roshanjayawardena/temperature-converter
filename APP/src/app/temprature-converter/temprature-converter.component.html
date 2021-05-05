@@ -50,9 +50,9 @@
           <h1>You are converting from {{ tempStatusEnum[tempType] }} To</h1>
         </div>
         <div class="row">
-          <p *ngIf="celsius !== 0"><B>Celsius: </B> {{ celsius.toFixed(2) + '°C'}}</p>
-          <p *ngIf="fahrenheit !== 0"><B>Fahrenheit: </B> {{ fahrenheit.toFixed(2) + '°F'}}</p>
-          <p *ngIf="kelvin !== 0"><B>Kelvin: </B> {{ kelvin.toFixed(2) + '°K'}}</p>
+          <p *ngIf="tempModel.celsius !== undefined"><B>Celsius: </B> {{ tempModel.celsius.toFixed(2) + '°C'}}</p>
+          <p *ngIf="tempModel.fahrenheit !== undefined"><B>Fahrenheit: </B> {{ tempModel.fahrenheit.toFixed(2) + '°F'}}</p>
+          <p *ngIf="tempModel.kelvin !== undefined"><B>Kelvin: </B> {{ tempModel.kelvin.toFixed(2) + '°K'}}</p>
         </div>
       </div>
     </form>

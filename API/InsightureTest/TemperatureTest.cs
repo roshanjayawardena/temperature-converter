@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Threading.Tasks;
 using Temprature.Commands;
+using Temprature.Commands.TemperatureCreater;
 
 namespace InsightureTest
 {
@@ -11,7 +12,7 @@ namespace InsightureTest
         [SetUp]
         public void Setup()
         {
-        }       
+        }
 
         [Test]
         public async Task ShouldReturnTempValues_WhenInsertIntegerValue()
@@ -19,19 +20,21 @@ namespace InsightureTest
 
             try
             {
-                var command = new ConvertTemperatureValueCommand() { 
-                
-                     Temprature = 30,
-                     TempratureType = TemperatureTypeEnum.Celsius
+                var command = new ConvertTemperatureValueCommand()
+                {
+
+                    Temprature = 30,
+                    TempratureType = TemperatureTypeEnum.Celsius
                 };
+
                 var temperatureModel = await SendAsync(command);
-                Assert.AreEqual(86, temperatureModel.Fahrenheit);
-                Assert.AreEqual(303.15, temperatureModel.Kelvin);
+                Assert.AreEqual(86, ((FromCelsius)temperatureModel).Fahrenheit);
+                Assert.AreEqual(303.15, ((FromCelsius)temperatureModel).Kelvin);
             }
             catch (Exception ex)
             {
                 throw;
-            }           
+            }
         }
 
         // for celcius 
@@ -47,8 +50,8 @@ namespace InsightureTest
                     TempratureType = TemperatureTypeEnum.Celsius
                 };
                 var temperatureModel = await SendAsync(command);
-                Assert.AreEqual(86.936, temperatureModel.Fahrenheit);
-                Assert.AreEqual(303.66999999999996d, temperatureModel.Kelvin); 
+                Assert.AreEqual(86.936, ((FromCelsius)temperatureModel).Fahrenheit);
+                Assert.AreEqual(303.66999999999996d, ((FromCelsius)temperatureModel).Kelvin);
             }
             catch (Exception ex)
             {
@@ -68,8 +71,8 @@ namespace InsightureTest
                     TempratureType = TemperatureTypeEnum.Celsius
                 };
                 var temperatureModel = await SendAsync(command);
-                Assert.AreEqual(-22, temperatureModel.Fahrenheit);
-                Assert.AreEqual(243.14999999999998d, temperatureModel.Kelvin);
+                Assert.AreEqual(-22, ((FromCelsius)temperatureModel).Fahrenheit);
+                Assert.AreEqual(243.14999999999998d, ((FromCelsius)temperatureModel).Kelvin);
             }
             catch (Exception ex)
             {
@@ -89,14 +92,14 @@ namespace InsightureTest
                     TempratureType = TemperatureTypeEnum.Celsius
                 };
                 var temperatureModel = await SendAsync(command);
-                Assert.AreEqual(32, temperatureModel.Fahrenheit);
-                Assert.AreEqual(273.15, temperatureModel.Kelvin);
+                Assert.AreEqual(32, ((FromCelsius)temperatureModel).Fahrenheit);
+                Assert.AreEqual(273.15, ((FromCelsius)temperatureModel).Kelvin);
             }
             catch (Exception ex)
             {
                 throw;
             }
-        }      
+        }
 
     }
 }
