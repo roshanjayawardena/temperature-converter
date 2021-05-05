@@ -1,5 +1,6 @@
 # Temperature Conversion
 
+## Introduction
 <p>Temperature conversion between Celsius,Fahrenheit and Kelvin </p>
 
 ## Installation
@@ -28,4 +29,8 @@ STEP 2 <br/>
 Then you build and run the project finally you can see the api with swagger. <br/>
 
 ## Technologies used
+.NET Core </br>
+C# </br>
+CQRS/Mediator Pattern </br>
+Angular 9 </br>
 
