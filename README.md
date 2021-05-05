@@ -1,4 +1,8 @@
-# Insighture Test (Angular/.net Core/ C#)
+# Temperature Conversion
+
+<p>Temperature conversion between Celsius,Fahrenheit and Kelvin </p>
+
+## Installation
 -------------------------- APP ------------------------------
 
 Step 1 <br/>
@@ -23,8 +27,5 @@ Then open the API project by using visual studio and double click the <B>TestIns
 STEP 2 <br/>
 Then you build and run the project finally you can see the api with swagger. <br/>
 
-<h3>Technologies used:</h3>
-</br>
-<B>Angular 9<B><br/>
-<B>.NET Core web api</B><br/>
-<B>C#</B>
+## Technologies used
+
